@@ -40,11 +40,12 @@ public class LoginTests {
 		driver.get(baseUrl);
 	}
 	
-	@AfterMethod
+	/*@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		driver.quit();
-	}
+	}*/
+	
 	@Test
 	public void validLoginTest() {
 		loginPOM.sendUserName("admin");
