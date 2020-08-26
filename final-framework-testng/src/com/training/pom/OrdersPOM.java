@@ -47,6 +47,7 @@ public class OrdersPOM {
 		String pageTitle = driver.getTitle();
 		return pageTitle;
 	}
+	
 
 	public boolean ViewProduct() {
 		this.viewProduct.click();

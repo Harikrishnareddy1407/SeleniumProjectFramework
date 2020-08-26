@@ -112,9 +112,7 @@ public class EditProduct {
 	    String UpdatedQuantity = productsPOM.updatedProductQuanityValue();
 	    assertEquals(UpdatedQuantity,Quantity);
 	    extentTest.log(LogStatus.PASS, "Product Quantiy Value is updated and the updated quantity value is  '" +  UpdatedQuantity + "'");
-	    extent.endTest(extentTest);
-	    
-		
+	    extent.endTest(extentTest);	   	
 	    
 		
 	}

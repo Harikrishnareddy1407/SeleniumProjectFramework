@@ -97,9 +97,7 @@ public class DeleteMultipleProducts {
 		
 		assertTrue(actualMessageText.contains(expectedMessageText)); 
 	    extentTest.log(LogStatus.PASS, "Multiple Product deletion message is displayed as expected and the message text  is '" +  actualMessageText + "'");
-	    extent.endTest(extentTest);
-	    
-	    
+	    extent.endTest(extentTest);	        
 	    
 		
 	}

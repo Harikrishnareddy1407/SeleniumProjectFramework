@@ -165,7 +165,6 @@ public class ProductsPOM {
 		this.quanityValue.sendKeys(QuantityValue);		
 		js.executeScript("window.scrollTo(0, 0)");
 		this.saveData.click();
-
 	}
 
 	public String productUpdatedMessageAlert() {

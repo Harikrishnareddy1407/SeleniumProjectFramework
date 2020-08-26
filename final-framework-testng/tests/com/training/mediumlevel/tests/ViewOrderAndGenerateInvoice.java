@@ -95,8 +95,7 @@ public class ViewOrderAndGenerateInvoice {
 	    boolean invoice =  ordersPOM.generateInvoice();	    
 	    assertTrue(invoice);
 	    extentTest.log(LogStatus.PASS, "invoice generated Successfully");
-	    extent.endTest(extentTest);
-		
+	    extent.endTest(extentTest);		
 	}
 		
 	}
