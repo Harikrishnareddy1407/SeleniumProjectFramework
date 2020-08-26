@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.DeleteProduct">
+      <class name="com.training.sanity.tests.ViewOrderAndGenerateInvoice">
         <methods>
-          <include name="tearDown"/>
-          <include name="deleteCatagory"/>
-          <include name="setUp"/>
+          <include name="viewProduct"/>
           <include name="setUpBeforeClass"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.DeleteProduct -->
+      </class> <!-- com.training.sanity.tests.ViewOrderAndGenerateInvoice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
