@@ -104,7 +104,7 @@ public class EditProduct {
 	    extentTest.log(LogStatus.PASS, "Successfully updated quantity value in data tab and saved the record");
 	    String actualMessageText =productsPOM.productUpdatedMessageAlert();		
 		assertTrue(actualMessageText.contains(expectedMessageText)); 
-		extentTest.log(LogStatus.PASS, "Product deletion message is displayed as expected and the message text  is '" +  actualMessageText + "'");
+		extentTest.log(LogStatus.PASS, "Product updated message is displayed as expected and the message text  is '" +  actualMessageText + "'");
 	    extent.endTest(extentTest);
 	    
 	    //validate updated value appear for the product

@@ -21,7 +21,7 @@ public class CategoriesPOM {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[@class='parent']/i[@class='fa fa-tags fw']")
+	@FindBy(xpath = "//a[@class='parent']/i[@class='fa fa-tags fw']")	
 	private WebElement catalog;
 
 	@FindBy(xpath = "//li[@id='menu-catalog']/ul")
@@ -33,6 +33,23 @@ public class CategoriesPOM {
 	@FindBy(xpath = "//a[text()='Category Name']")
 	private WebElement catogoryName;
 
+	@FindBy(xpath = "//input[@id='input-name1']")
+	private WebElement inputCatogoryName;
+	
+	
+
+	@FindBy(xpath = "//input[@id='input-meta-title1']")
+	private WebElement inputMetatagtitle;
+	
+	@FindBy(xpath = "//textarea[@id='input-meta-description1']")
+	private WebElement inputMetatagDescription;
+	
+	@FindBy(xpath = "//a[text()='Data']")
+	private WebElement dataTab;
+	
+	@FindBy(xpath = "//a[text()='Links']")
+	private WebElement linksTab;
+	
 	@FindBy(xpath = "//a[text()='Sort Order']")
 	private WebElement sortorder;
 
@@ -47,6 +64,34 @@ public class CategoriesPOM {
 
 	@FindBy(xpath = "//div[contains(text(),' Success: You have modified categories!')]")
 	private WebElement DeletionMessage;
+	
+	@FindBy(xpath = "//div[contains(text(),' Success: You have modified categories!')]")
+	private WebElement categoryAdditionMessage;		       
+	
+	@FindBy(xpath = "//div[contains(text(),' Success: You have modified products!')]")
+	private WebElement productAdditionMessage;
+	
+	@FindBy(xpath = "//a[@data-original-title='Add New']")
+	private WebElement addCategory;
+	
+	@FindBy(xpath = "//li[@id='menu-catalog']/ul/li[2]/a")
+	private WebElement product;
+	
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement save;
+	
+	@FindBy(xpath = "//input[@id='input-model']")
+	private WebElement model;
+	
+	@FindBy(xpath = "//input[@id='input-category']")
+	private WebElement categories;
+	
+	@FindBy(xpath = "//h3[@class='panel-title']")
+	private WebElement categoriesTable;
+	
+	
+	
+
 
 	public String validateValuesUnderCatalog() {
 
@@ -91,5 +136,73 @@ public class CategoriesPOM {
 		String Messagetext = this.DeletionMessage.getText();
 		return Messagetext;
 	}	
+	
+	
+	public String navigateToCategories()
+	{
+		Actions act = new Actions(driver);
+		act.moveToElement(this.catalog).build().perform();
+		this.categorylink.click();
+		return this.categoriesTable.getText();
+		
+		
+	}
+	
+	public void navigateToProducts()
+	{
+		Actions act = new Actions(driver);
+		act.moveToElement(this.catalog).build().perform();
+		this.product.click();
+		
+	}
+	
+	
+	public String addNewCategory(String cName, String metaTag, String metaTagDesc)
+	{
+		this.addCategory.click();
+		this.inputCatogoryName.sendKeys(cName);
+		this.inputMetatagtitle.sendKeys(metaTag);
+		this.inputMetatagDescription.sendKeys(metaTagDesc);
+		this.save.click();
+		String Messagetext = this.categoryAdditionMessage.getText();
+		return Messagetext;
+		
+	}
+	
+	public String addNewProduct(String pName, String metaTitle,String model,String category)
+	{
+		this.navigateToProducts();
+		this.addCategory.click();
+		this.inputCatogoryName.sendKeys(pName);
+		this.inputMetatagtitle.sendKeys(metaTitle);
+		this.dataTab.click();
+		this.model.sendKeys(model);
+		this.linksTab.click();
+		this.categories.sendKeys(category);
+		this.save.click();
+		String Messagetext = this.productAdditionMessage.getText();
+		return Messagetext;
+		
+	}
+	
+	public void addNewCategoryandProduct(String cName, String metaTag, String metaTagDesc, String pName, String metaTitle,String model,String category)
+	{
+		this.addCategory.click();
+		this.inputCatogoryName.sendKeys(cName);
+		this.inputMetatagtitle.sendKeys(metaTag);
+		this.inputMetatagDescription.sendKeys(metaTagDesc);
+		this.save.click();
+		this.navigateToProducts();
+		this.addCategory.click();
+		this.inputCatogoryName.sendKeys(pName);
+		this.inputMetatagtitle.sendKeys(metaTitle);
+		this.dataTab.click();
+		this.model.sendKeys(model);
+		this.linksTab.click();
+		this.categories.sendKeys(category);
+		this.save.click();
+		
+	
+	}
 
 }

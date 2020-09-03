@@ -71,7 +71,7 @@ public class FilterProduct {
         extent.close();
 	}
 	@Test
-	public void deleteCatagory() {
+	public void deleteCatagory(){
 		
 		extentTest = extent.startTest("Login to Application");
 		loginPOM.sendUserName("admin");

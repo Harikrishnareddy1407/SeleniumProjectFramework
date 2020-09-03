@@ -1,29 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-25T14:42:19 CDT" name="Default suite" finished-at="2020-08-25T14:42:40 CDT" duration-ms="20324">
+  <suite started-at="2020-09-02T15:06:58 CDT" name="Default suite" finished-at="2020-09-02T15:07:29 CDT" duration-ms="31200">
     <groups>
     </groups>
-    <test started-at="2020-08-25T14:42:19 CDT" name="Default test" finished-at="2020-08-25T14:42:40 CDT" duration-ms="20324">
-      <class name="com.training.sanity.tests.EditProduct">
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.EditProduct@47542153]" started-at="2020-08-25T14:42:19 CDT" name="setUpBeforeClass" finished-at="2020-08-25T14:42:19 CDT" duration-ms="6" status="PASS">
+    <test started-at="2020-09-02T15:06:58 CDT" name="Default test" finished-at="2020-09-02T15:07:29 CDT" duration-ms="31200">
+      <class name="com.training.complex.level.tests.addCategoryAndProducts">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:06:58 CDT" name="setUpBeforeClass" finished-at="2020-09-02T15:07:07 CDT" duration-ms="8285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.EditProduct@47542153]" started-at="2020-08-25T14:42:19 CDT" name="setUp" finished-at="2020-08-25T14:42:28 CDT" duration-ms="9022" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:08 CDT" name="setUp" finished-at="2020-09-02T15:07:08 CDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="editProduct()[pri:0, instance:com.training.sanity.tests.EditProduct@47542153]" started-at="2020-08-25T14:42:28 CDT" name="editProduct" finished-at="2020-08-25T14:42:38 CDT" duration-ms="9041" status="PASS">
+        <test-method signature="addcategoryAndProducts(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:08 CDT" name="addcategoryAndProducts" data-provider="excel-inputs" finished-at="2020-09-02T15:07:13 CDT" duration-ms="5831" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Electronic]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Electronic]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Electronic]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Electronic]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Samsung]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Samsung]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Electronic]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.sanity.tests.EditProduct@47542153]" started-at="2020-08-25T14:42:38 CDT" name="tearDown" finished-at="2020-08-25T14:42:40 CDT" duration-ms="2222" status="PASS">
+        </test-method> <!-- addcategoryAndProducts -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:13 CDT" name="setUp" finished-at="2020-09-02T15:07:13 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addcategoryAndProducts(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:13 CDT" name="addcategoryAndProducts" data-provider="excel-inputs" finished-at="2020-09-02T15:07:18 CDT" duration-ms="4540" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Television]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Television]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Television]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Television]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Onida]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Onida]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[TV]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addcategoryAndProducts -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:18 CDT" name="setUp" finished-at="2020-09-02T15:07:18 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addcategoryAndProducts(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:18 CDT" name="addcategoryAndProducts" data-provider="excel-inputs" finished-at="2020-09-02T15:07:23 CDT" duration-ms="5120" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kitchen]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kitchen]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kitchen]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Kitchen]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Microwave]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Oven]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Kitchen]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addcategoryAndProducts -->
+        <test-method signature="addcategoryAndProducts(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:23 CDT" name="addcategoryAndProducts" data-provider="excel-inputs" finished-at="2020-09-02T15:07:27 CDT" duration-ms="4404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sports]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sports]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sports]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sports]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[MRF]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Cricket Bat]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sports]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addcategoryAndProducts -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:23 CDT" name="setUp" finished-at="2020-09-02T15:07:23 CDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.complex.level.tests.addCategoryAndProducts@47542153]" started-at="2020-09-02T15:07:27 CDT" name="tearDown" finished-at="2020-09-02T15:07:29 CDT" duration-ms="1931" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.EditProduct -->
+      </class> <!-- com.training.complex.level.tests.addCategoryAndProducts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

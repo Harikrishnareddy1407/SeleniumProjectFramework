@@ -3,8 +3,6 @@ package com.training.pom;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -55,6 +53,9 @@ public class ProductsPOM {
 
 	@FindBy(xpath = "//a[text()='Data']")
 	private WebElement dataTab;
+	
+	@FindBy(xpath = "//a[text()='Links']")
+	private WebElement linkaTab;
 
 	@FindBy(id = "input-quantity")
 	private WebElement quanityValue;
@@ -76,11 +77,35 @@ public class ProductsPOM {
 
 	@FindBy(xpath = "//label[text()='Model']")
 	private WebElement labelField;
-	
+
 	@FindBy(xpath = "//table/tbody/tr[1]/td[6]/span")
 	private WebElement updatedQuantityValue;
+
+	@FindBy(xpath = "//a[contains(@href,'product/add')]")
+	private WebElement addProduct;
+
+	@FindBy(xpath = "//input[@id='input-name1']")
+	private WebElement addProductName;
+
+	@FindBy(xpath = "//input[@id='input-meta-title1']")
+	private WebElement addMetaTitle;
+
+	@FindBy(xpath = "//input[@id='input-model']")
+	private WebElement addDataModel;
+
+	@FindBy(xpath = "//input[@id='input-price']")
+	private WebElement addProductprice;
+
+	@FindBy(xpath = "//input[@id='input-category']")
+	private WebElement inputCategories;
 	
 	
+	@FindBy(xpath = "//h3[@class='panel-title']")
+	private WebElement addProductPage;
+	
+	
+	
+
 	
 
 	public String navigateToProducts() {
@@ -162,7 +187,7 @@ public class ProductsPOM {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", this.taxClass);
 		this.quanityValue.clear();
-		this.quanityValue.sendKeys(QuantityValue);		
+		this.quanityValue.sendKeys(QuantityValue);
 		js.executeScript("window.scrollTo(0, 0)");
 		this.saveData.click();
 	}
@@ -172,17 +197,40 @@ public class ProductsPOM {
 		String Messagetext = this.DeletionMessage.getText();
 		return Messagetext;
 	}
-	
+
 	public String updatedProductQuanityValue() {
 
 		String upd_QuantityValue = this.updatedQuantityValue.getText();
 		return upd_QuantityValue;
+
+	}
+
+	public String ClickAddProduct() {
+		this.addProduct.click();
+		return this.addProductPage.getText();
+
+	}
+
+	public void enterProductGeneralDetails(String ProdName,String MetaTitle) {
+		this.addProductName.sendKeys(ProdName);
+		this.addMetaTitle.sendKeys(MetaTitle);
+
+	}
+
+	public void enterProductDataTabDetails(String modelName, String prodPrice, String quantity) {
+		this.dataTab.click();
+		this.addDataModel.sendKeys(modelName);
+		this.addProductprice.sendKeys(prodPrice);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", this.taxClass);
+		this.quanityValue.sendKeys(quantity);
+		js.executeScript("window.scrollTo(0, 0)");		
 		
 	}
-	
-	
 
-	
-	
-
+	public void enterCategoriesTabDetails(String categoryName) {
+		this.linkaTab.click();
+		this.inputCategories.sendKeys(categoryName);
+		 this.saveData.click();
+	}
 }
